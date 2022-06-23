@@ -32,11 +32,66 @@ header{
     margin-right: 0.4em;
 }
 
+/*bouton header*/
+#menu-head{
+}
+
+#menu-head a:hover{
+    text-decoration: none;
+    color: var(--secondcolor);
+}
+
+#menu-head a{
+    text-decoration: none;
+    color: black;
+}
+
+#headmore{
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+}
+
+#searching{
+    display: flex;
+    gap: 0.5em;
+}
+
+#search{
+    border: none;
+    width: 8em;
+}
+
+#btnloup{
+    background: none;
+    border: none;
+    border-left: 1px grey solid;
+}
+
+#selectlang{
+    background: none;
+    border: none;
+}
+
+#log{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--firstcolor);
+    color: white;
+    border: none;
+    padding: 1em;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    border-radius: 3em;
+}
+
 /*style bouton burger*/
 #btnburger{
     width: 2em;
     height: 2em;
-    display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
@@ -73,7 +128,7 @@ h1{
     position: relative;
     background: url(../img/bgimg.png) no-repeat center / cover;
     height: 25em;
-    width: 100%;
+    width: 25em;
     margin: auto;
 }
 
@@ -184,7 +239,7 @@ h2{
 
 
 /*style bouton*/
-button{
+#learn{
     width: 90%;
     margin: auto;
     display: flex;
@@ -200,12 +255,87 @@ button{
     border-radius: 3em;
 }
 
-button:hover{
+#learn:hover{
     color: black;
     background-color: var(--secondcolor);
     opacity: 80%;
 }
 
-button:hover path{
+#learn:hover path{
     stroke: black;
+}
+
+/*règle spécifique au mobile*/
+@media only screen and (max-width: 992px){
+    #menu-head{
+        display: none;
+    }
+
+    #btnburger{
+        display: flex;
+    }
+    
+    #headmore{
+        display: none;
+    }
+}
+
+/*règle spécifique au desktop*/
+@media only screen and (min-width: 992px){
+    header{
+        width: 80%;
+        margin: auto;
+    }
+
+    #headmore{
+        display: flex;
+    }
+    
+    main{
+        width: 80%;
+        margin: auto;
+    }
+
+    #test{
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        column-gap: 2em;
+    }
+
+    #container{
+        font-size: 20px;
+        grid-row: 1 / span 2;
+        grid-column: 2;
+    }
+
+    #btnburger{
+        display: none;
+    }
+
+    #menu-head li{
+        list-style: none;
+        gap: 2em;
+    }
+
+    #menu-head ul{
+        display: flex;
+        gap: 2em;
+    }
+
+    #test{
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+    }
+
+    #main-text1{
+        margin-top: 3em;
+        height: auto;
+    }
+
+    #learn{
+        font-size: 0.8em;
+        margin-left: 0em;
+        width: 16em;
+    }
+
 }
