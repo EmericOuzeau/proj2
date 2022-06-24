@@ -19,6 +19,10 @@ header{
     justify-content: space-between;
 }
 
+#align{
+    display: flex;
+}
+
 #logohead{
     display: flex;
     align-items: center;
@@ -30,6 +34,11 @@ header{
 
 #logo{
     margin-right: 0.4em;
+}
+
+#menu-head li{
+    list-style: none;
+    gap: 2em;
 }
 
 /*bouton header*/
@@ -265,73 +274,83 @@ h2{
     stroke: black;
 }
 
-/*règle spécifique au mobile*/
+/*------------------règle spécifique au mobile*/
 @media only screen and (max-width: 992px){
+    /*header*/
     #menu-head{
         display: none;
     }
 
+    /*afficher le bouton burger en mobil*/
     #btnburger{
         display: flex;
     }
-    
+
+    /*masquer le nav en mobil*/
     #headmore{
         display: none;
     }
+
+    /*texte*/
+    #main-text1{
+        margin-top: 3em;
+        height: auto;
+        padding-right: 4em;
+    }
 }
 
-/*règle spécifique au desktop*/
+/*------------------règle spécifique au desktop*/
 @media only screen and (min-width: 992px){
-    header{
-        width: 80%;
-        margin: auto;
-    }
-
-    #headmore{
-        display: flex;
-    }
     
     main{
         width: 80%;
         margin: auto;
     }
-
-    #test{
-        display: grid;
-        grid-template-columns: repeat(2, auto);
-        column-gap: 2em;
-    }
-
-    #container{
-        font-size: 20px;
-        grid-row: 1 / span 2;
-        grid-column: 2;
-    }
-
+    
+    /*masquer le bouton burger en desktop*/
     #btnburger{
         display: none;
     }
 
-    #menu-head li{
-        list-style: none;
-        gap: 2em;
+    /*afficher le nav en desktop*/
+    #headmore{
+        display: flex;
+    }
+
+    /*header*/
+    header{
+        width: 80%;
+        margin: auto;
     }
 
     #menu-head ul{
         display: flex;
         gap: 2em;
+        margin-left: 3em;
     }
 
-    #test{
+    /*aligement desktop*/
+    #griddesktop{
         display: grid;
         grid-template-columns: repeat(2, auto);
     }
 
+    /*bloque flotant et image*/
+    #container{
+        font-size: 22px;
+        grid-row: 1 / span 2;
+        grid-column: 2;
+    }
+
+
     #main-text1{
         margin-top: 3em;
         height: auto;
+        padding-right: 8em;
     }
 
+
+    /*bouton lean en desktop*/
     #learn{
         font-size: 0.8em;
         margin-left: 0em;
